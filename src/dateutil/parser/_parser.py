@@ -664,7 +664,7 @@ class parser(object):
                      "tzname", "tzoffset", "ampm","any_unused_tokens"]
 
     def _parse(self, timestr, dayfirst=None, yearfirst=None, fuzzy=False,
-               fuzzy_with_tokens=False):
+               fuzzy_with_tokens=False, date_only=False):
         """
         Private method which performs the heavy lifting of parsing, called from
         ``parse()``, which passes on its ``kwargs`` to this function.
@@ -777,6 +777,9 @@ class parser(object):
                                 # TODO: not hit in tests
                             i += 4
 
+                # skip the rest of the checks
+                elif date_only:
+                    skipped_idxs.append(i)
                 # Check am/pm
                 elif info.ampm(l[i]) is not None:
                     value = info.ampm(l[i])
@@ -850,7 +853,16 @@ class parser(object):
 
                 else:
                     skipped_idxs.append(i)
+
                 i += 1
+                if date_only and len(ymd) == 3:
+                    # Process year/month/day
+                    year, month, day = ymd.resolve_ymd(yearfirst, dayfirst)
+                    res.century_specified = ymd.century_specified
+                    res.year = year
+                    res.month = month
+                    res.day = day
+                    return res, None
 
             # Process year/month/day
             year, month, day = ymd.resolve_ymd(yearfirst, dayfirst)
