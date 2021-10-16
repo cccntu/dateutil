@@ -872,6 +872,12 @@ class parser(object):
             res.month = month
             res.day = day
 
+            if date_only:
+                # don't guess ymd if not all are found
+                if any(x is None for x in (year, month, day)):
+                    return None, None
+
+
         except (IndexError, ValueError):
             return None, None
 
