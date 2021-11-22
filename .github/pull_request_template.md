@@ -8,5 +8,5 @@ Closes <!-- issue number here -->
 
 ### Pull Request Checklist
 - [ ] Changes have tests
-- [ ] Authors have been added to [AUTHORS.md](https://github.com/dateutil/dateutil/blob/master/AUTHORS.md)
-- [ ] News fragment added in changelog.d. See [CONTRIBUTING.md](https://github.com/dateutil/dateutil/blob/master/CONTRIBUTING.md#changelog) for details
+- [ ] Authors have been added to [AUTHORS.md](https://github.com/bs_dateutil/bs_dateutil/blob/master/AUTHORS.md)
+- [ ] News fragment added in changelog.d. See [CONTRIBUTING.md](https://github.com/bs_dateutil/bs_dateutil/blob/master/CONTRIBUTING.md#changelog) for details

@@ -1,15 +1,15 @@
 ==
 tz
 ==
-.. py:currentmodule:: dateutil.tz
+.. py:currentmodule:: bs_dateutil.tz
 
-.. automodule:: dateutil.tz
+.. automodule:: bs_dateutil.tz
 
 Objects
 -------
-.. py:data:: dateutil.tz.UTC
+.. py:data:: bs_dateutil.tz.UTC
 
-    A convenience instance of :class:`dateutil.tz.tzutc`.
+    A convenience instance of :class:`bs_dateutil.tz.tzutc`.
 
     .. versionadded:: 2.7.0
 

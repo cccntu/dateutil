@@ -1,7 +1,7 @@
 {
     "metadata_version": 2.0,
     "releases_url": [
-        "https://dateutil.github.io/tzdata/tzdata/",
+        "https://bs_dateutil.github.io/tzdata/tzdata/",
         "ftp://ftp.iana.org/tz/releases/"
     ],
     "tzdata_file": "tzdata2021a.tar.gz",

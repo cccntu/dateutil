@@ -4,7 +4,7 @@ Release Checklist
     versions.
 [ ] Update the metadata in zonefile_metadata.json to include the latest tzdata
     release from https://www.iana.org/time-zones.
-[ ] If necessary, update the tzdata mirror at https://github.com/dateutil/tzdata
+[ ] If necessary, update the tzdata mirror at https://github.com/bs_dateutil/tzdata
 [ ] Update NEWS with list of changes:
     [ ] Invoke `tox -e news -- --version <NEXT_VERSION>`
     [ ] Make sure that only `template.rst` remains in changelog.d/
@@ -54,8 +54,8 @@ To make a release:
    number will be `3.1.2.dev0`, and subsequent commits will be things like
    `3.1.2.dev0+fe9dacc4.d20220603`).
 
-2. Check the Test PyPI page for `python-dateutil` to ensure that the dev release
-   worked correctly: https://test.pypi.org/project/python-dateutil/
+2. Check the Test PyPI page for `python-bs_dateutil` to ensure that the dev release
+   worked correctly: https://test.pypi.org/project/python-bs_dateutil/
 
    Dev releases may not appear as the default page, so click "Release history"
    and navigate to the release you are trying to check. Make sure that the
@@ -72,7 +72,7 @@ To make a release:
 
 6. Create a new GitHub release with the new entries from `NEWS` in the
    description. This will trigger the workflow to build and release the final
-   version to PyPI.org. Check https://pypi.org/project/python-dateutil to
+   version to PyPI.org. Check https://pypi.org/project/python-bs_dateutil to
    ensure that everything worked correctly.
 
 7. Delete any dev tags created during the testing process from your upstream

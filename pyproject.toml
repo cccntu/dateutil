@@ -8,8 +8,8 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [tool.towncrier]
-    package = "dateutil"
-    package_dir = "dateutil"
+    package = "bs_dateutil"
+    package_dir = "bs_dateutil"
     filename = "NEWS"
     directory = "changelog.d"
     title_format = "Version {version} ({project_date})"

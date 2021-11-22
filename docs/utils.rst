@@ -1,6 +1,6 @@
 =====
 utils
 =====
-.. automodule:: dateutil.utils
+.. automodule:: bs_dateutil.utils
    :members:
    :undoc-members:
