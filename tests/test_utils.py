@@ -2,10 +2,10 @@
 from __future__ import unicode_literals
 from datetime import timedelta, datetime
 
-from dateutil import tz
-from dateutil import utils
-from dateutil.tz import UTC
-from dateutil.utils import within_delta
+from bs_dateutil import tz
+from bs_dateutil import utils
+from bs_dateutil.tz import UTC
+from bs_dateutil.utils import within_delta
 
 from freezegun import freeze_time
 

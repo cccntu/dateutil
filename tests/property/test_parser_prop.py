@@ -3,7 +3,7 @@ from hypothesis import given
 
 import pytest
 
-from dateutil.parser import parserinfo
+from bs_dateutil.parser import parserinfo
 
 
 @pytest.mark.parserinfo
@@ -13,8 +13,7 @@ def test_convertyear(n):
 
 
 @pytest.mark.parserinfo
-@given(integers(min_value=-50,
-                max_value=49))
+@given(integers(min_value=-50, max_value=49))
 def test_convertyear_no_specified_century(n):
     p = parserinfo()
     new_year = p._year + n

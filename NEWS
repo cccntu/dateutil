@@ -12,9 +12,9 @@ Bugfixes
 
 - Fixed a bug in the parser where non-``ValueError`` exceptions would be raised
   during exception handling; this would happen, for example, if an
-  ``IllegalMonthError`` was raised in ``dateutil`` code. Fixed by Mark Bailey.
+  ``IllegalMonthError`` was raised in ``bs_dateutil`` code. Fixed by Mark Bailey.
   (gh issue #981, pr #987).
-- Fixed the custom ``repr`` for ``dateutil.parser.ParserError``, which was not
+- Fixed the custom ``repr`` for ``bs_dateutil.parser.ParserError``, which was not
   defined due to an indentation error. (gh issue #991, gh pr #993)
 - Fixed a bug that caused ``b'`` prefixes to appear in parse_isodate exception
   messages. Reported and fixed by Paul Brown (@pawl) (gh pr #1122)
@@ -83,7 +83,7 @@ Bugfixes
   by Hugo van Kemenade (gh pr #950).
 - Updated many modules to use ``tz.UTC`` in favor of ``tz.tzutc()`` internally,
   to avoid an unnecessary function call. (gh pr #910).
-- Fixed issue where ``dateutil.tz`` was using a backported version of
+- Fixed issue where ``bs_dateutil.tz`` was using a backported version of
   ``contextlib.nullcontext`` even in Python 3.7 due to a malformed import
   statement. (gh pr #963).
 
@@ -167,7 +167,7 @@ Bugfixes
 --------
 
 - Add support for ISO 8601 times with comma as the decimal separator in the
-  ``dateutil.parser.isoparse`` function. (gh pr #721)
+  ``bs_dateutil.parser.isoparse`` function. (gh pr #721)
 - Changed handling of ``T24:00`` to be compliant with the standard. ``T24:00``
   now represents midnight on the *following* day.
   Fixed by @cheukting (gh issue #658, gh pr #751)
@@ -197,7 +197,7 @@ Documentation changes
 
 - Added documentation for the ``rrule.rrulestr`` function.
   Fixed by @prdickson (gh issue #623, gh pr #762)
-- Add documentation for the ``dateutil.tz.win`` module and mocked out certain
+- Add documentation for the ``bs_dateutil.tz.win`` module and mocked out certain
   Windows-specific modules so that autodoc can still be run on non-Windows
   systems. (gh issue #442, pr #715)
 - Added changelog to documentation. (gh issue #692, gh pr #707)
@@ -212,8 +212,8 @@ Documentation changes
   files. Contributed by @andrewcbennett (gh pr #757)
 - Fixed a broken doctest in the ``relativedelta`` module.
   Fixed by @nherriot (gh pr #758).
-- Reorganized ``dateutil.tz`` documentation and fixed issue with the
-  ``dateutil.tz`` docstring. (gh pr #714)
+- Reorganized ``bs_dateutil.tz`` documentation and fixed issue with the
+  ``bs_dateutil.tz`` docstring. (gh pr #714)
 
 
 Misc
@@ -282,14 +282,14 @@ Documentation changes
 - Added changelog to documentation. (gh issue #692, gh pr #707)
 - Changed order of keywords in rrule docstring. Reported and fixed by
   @rmahajan14 (gh issue #686, gh pr #695).
-- Added documentation for ``dateutil.tz.gettz``. Reported by @pganssle (gh
+- Added documentation for ``bs_dateutil.tz.gettz``. Reported by @pganssle (gh
   issue #647). Fixed by @weatherpattern (gh pr #704)
 - Cleaned up malformed RST in the ``tz`` documentation. (gh issue #702, gh pr
   #706)
 - Changed the default theme to ``sphinx_rtd_theme``, and changed the sphinx
   configuration accordingly. (gh pr #707)
-- Reorganized ``dateutil.tz`` documentation and fixed issue with the
-  ``dateutil.tz`` docstring. (gh pr #714)
+- Reorganized ``bs_dateutil.tz`` documentation and fixed issue with the
+  ``bs_dateutil.tz`` docstring. (gh pr #714)
 
 
 Misc
@@ -349,7 +349,7 @@ Version 2.7.0
 - Added __all__ variable to the root package. Reported by @tebriel
   (gh issue #406), fixed by @mariocj89 (gh pr #494)
 - Added python_requires to setup.py so that pip will distribute the right
-  version of dateutil. Fixed by @jakec-github (gh issue #537, pr #552)
+  version of bs_dateutil. Fixed by @jakec-github (gh issue #537, pr #552)
 - Added the utils submodule, for miscellaneous utilities.
 - Added within_delta function to utils - added by @justanr (gh issue #432,
   gh pr #437)
@@ -417,7 +417,7 @@ Version 2.7.0
 - Expand definition of tz.tzlocal equality so that the local zone is allow
   equality with tzoffset and tzutc. (gh pr #598)
 - Deprecated the idiosyncratic tzstr format mentioned in several examples but
-  evidently designed exclusively for dateutil, and very likely not used by
+  evidently designed exclusively for bs_dateutil, and very likely not used by
   any current users. (gh issue #595, gh pr #606)
 - Added the tz.resolve_imaginary function, which generates a real date from
   an imaginary one, if necessary. Implemented by @Cheukting (gh issue #339,
@@ -444,7 +444,7 @@ Version 2.7.0
   a version number from the git metadata. Reported by @jreback (gh issue #511),
   implemented by @Sulley38 (gh pr #564)
 - Switched setup.py to use find_packages, and started testing against pip
-  installed versions of dateutil in CI. Fixed issue with parser import
+  installed versions of bs_dateutil in CI. Fixed issue with parser import
   discovered by @jreback in pandas-dev/pandas#18141. (gh issue #507, pr #509)
 - Switched test suite to using pytest (gh pr #495)
 - Switched CI over to use tox. Fixed by @gaborbernat (gh pr #549)
@@ -523,14 +523,14 @@ Version 2.6.0
 =============
 - Added PEP-495-compatible methods to address ambiguous and imaginary dates in
   time zones in a backwards-compatible way. Ambiguous dates and times can now
-  be safely represented by all dateutil time zones. Many thanks to Alexander
+  be safely represented by all bs_dateutil time zones. Many thanks to Alexander
   Belopolski (@abalkin) and Tim Peters @tim-one for their inputs on how to
   address this. Original issues reported by Yupeng and @zed (lP: 1390262,
   gh issues #57, #112, #249, #284, #286, prs #127, #225, #248, #264, #302).
 - Added new methods for working with ambiguous and imaginary dates to the tz
   module. datetime_ambiguous() determines if a datetime is ambiguous for a given
   zone and datetime_exists() determines if a datetime exists in a given zone.
-  This works for all fold-aware datetimes, not just those provided by dateutil.
+  This works for all fold-aware datetimes, not just those provided by bs_dateutil.
   (gh issue #253, gh pr #302)
 - Fixed an issue where dst() in Portugal in 1996 was returning the wrong value
   in tz.tzfile objects. Reported by @abalkin (gh issue #128, pr #225)
@@ -632,8 +632,8 @@ Version 2.5.0
   script will work with older zoneinfo_metadata.json files, but new metadata
   files will not work with older updatezinfo.py versions. Additionally, we have
   started hosting our own mirror of the Olson databases on a GitHub pages
-  site (https://dateutil.github.io/tzdata/) (gh pr #183)
-- dateutil zoneinfo tarballs now contain the full zoneinfo_metadata file used
+  site (https://bs_dateutil.github.io/tzdata/) (gh pr #183)
+- bs_dateutil zoneinfo tarballs now contain the full zoneinfo_metadata file used
   to generate them. (gh issue #27, gh pr #85)
 - relativedelta can now be safely subclassed without derived objects reverting
   to base relativedelta objects as a result of arithmetic operations.
@@ -686,7 +686,7 @@ Version 2.5.0
   Contributed by @labrys. (gh pr #134)
 - Fixed a problem causing issues importing zoneinfo in certain circumstances.
   Issue and solution contributed by @alexxv (gh issue #97, pr #99)
-- Fixed an issue where dateutil timezones were not compatible with basic time
+- Fixed an issue where bs_dateutil timezones were not compatible with basic time
   objects. One of many, many timezone related issues contributed and tested by
   @labrys. (gh issue #132, pr #181)
 - Fixed issue where tzwinlocal had an invalid utcoffset. (gh issue #135,
@@ -711,7 +711,7 @@ Version 2.5.0
 - Many fixes to the documentation (gh pr #103, gh pr #87 from @radarhere,
   gh pr #154 from @gpoesia, gh pr #156 from @awsum, gh pr #168 from @ja8zyjits)
 - Added a code coverage tool to the CI to help improve the library. (gh pr #182)
-- We now have a mailing list - dateutil@python.org, graciously hosted by
+- We now have a mailing list - bs_dateutil@python.org, graciously hosted by
   Python.org.
 
 
@@ -723,7 +723,7 @@ Version 2.4.2
 - Fix a parser issue where AM and PM tokens were showing up in fuzzy date
   stamps, triggering inappropriate errors. gh #56 (lp: 1428895), gh pr #63.
 - Missing function "setcachesize" removed from zoneinfo __all__ list by @ryanss,
-  fixing an issue with wildcard imports of dateutil.zoneinfo. (gh pr #66).
+  fixing an issue with wildcard imports of bs_dateutil.zoneinfo. (gh pr #66).
 - (PyPI only) Fix an issue with source distributions not including the test
   suite.
 
@@ -761,7 +761,7 @@ Version 2.4.0
 Version 2.3
 ===========
 
-- Cleanup directory structure, moved test.py to dateutil/tests/test.py
+- Cleanup directory structure, moved test.py to bs_dateutil/tests/test.py
 
 - Changed many aspects of dealing with the zone info file. Instead of a cache,
   all the zones are loaded to memory, but symbolic links are loaded only once,
@@ -788,7 +788,7 @@ Version 2.1
 
 - New maintainer
 
-- Dateutil now works on Python 2.6, 2.7 and 3.2 from same codebase (with six)
+- bs_dateutil now works on Python 2.6, 2.7 and 3.2 from same codebase (with six)
 
 - #704047: Ismael Carnales' patch for a new time format
 
@@ -798,7 +798,7 @@ Version 2.1
 Version 2.0
 ===========
 
-- Ported to Python 3, by Brian Jones.  If you need dateutil for Python 2.X,
+- Ported to Python 3, by Brian Jones.  If you need bs_dateutil for Python 2.X,
   please continue using the 1.X series.
 
 - There's no such thing as a "PSF License".  This source code is now
@@ -860,7 +860,7 @@ Version 1.3
   raising a NameError (even with broken files).  Johan Dahlin suggested
   the fix after a pyflakes run.
 
-- Version is now published in dateutil.__version__, as requested
+- Version is now published in bs_dateutil.__version__, as requested
   by Darren Dale.
 
 - All code is compatible with new-style division.
@@ -913,7 +913,7 @@ Version 0.9
   try to use the system timezone files, and fallback to
   the internal versions. It's also possible to ask for
   the internal versions directly by using
-  dateutil.zoneinfo.gettz().
+  bs_dateutil.zoneinfo.gettz().
 
 - New tzwin timezone type, allowing access to Windows
   internal timezones (contributed by Jeffrey Harris).

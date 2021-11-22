@@ -11,8 +11,8 @@ REPO_DIR=${2}
 ORIG_DIR=$(pwd)
 CITOOLS_DIR=$REPO_DIR/ci_tools
 
-REPO_TARBALL=${REPO_DIR}/src/dateutil/zoneinfo/dateutil-zoneinfo.tar.gz
-TMP_TARBALL=${TMP_DIR}/dateutil-zoneinfo.tar.gz
+REPO_TARBALL=${REPO_DIR}/src/bs_dateutil/zoneinfo/bs_dateutil-zoneinfo.tar.gz
+TMP_TARBALL=${TMP_DIR}/bs_dateutil-zoneinfo.tar.gz
 
 UPSTREAM_URL="https://github.com/eggert/tz.git"
 

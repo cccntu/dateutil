@@ -22,15 +22,16 @@ class PicklableMixin(object):
         Pickle and unpickle an object using ``pickle.dump`` / ``pickle.load`` on
         a temporary file.
         """
-        with tempfile.TemporaryFile('w+b') as pkl:
+        with tempfile.TemporaryFile("w+b") as pkl:
             pickle.dump(obj, pkl, **dump_kwargs)
-            pkl.seek(0)         # Reset the file to the beginning to read it
+            pkl.seek(0)  # Reset the file to the beginning to read it
             nobj = pickle.load(pkl, **load_kwargs)
 
         return nobj
 
-    def assertPicklable(self, obj, singleton=False, asfile=False,
-                        dump_kwargs=None, load_kwargs=None):
+    def assertPicklable(
+        self, obj, singleton=False, asfile=False, dump_kwargs=None, load_kwargs=None
+    ):
         """
         Assert that an object can be pickled and unpickled. This assertion
         assumes that the desired behavior is that the unpickled object compares
@@ -56,7 +57,8 @@ class TZContextBase(object):
 
     Subclasses must define ``get_current_tz`` and ``set_current_tz``.
     """
-    _guard_var_name = "DATEUTIL_MAY_CHANGE_TZ"
+
+    _guard_var_name = "bs_dateutil_MAY_CHANGE_TZ"
     _guard_allows_change = True
 
     def __init__(self, tzval):
@@ -78,12 +80,13 @@ class TZContextBase(object):
 
     @classmethod
     def tz_change_disallowed_message(cls):
-        """ Generate instructions on how to allow tz changes """
-        msg = ('Changing time zone not allowed. Set {envar} to {gval} '
-               'if you would like to allow this behavior')
+        """Generate instructions on how to allow tz changes"""
+        msg = (
+            "Changing time zone not allowed. Set {envar} to {gval} "
+            "if you would like to allow this behavior"
+        )
 
-        return msg.format(envar=cls._guard_var_name,
-                          gval=cls._guard_allows_change)
+        return msg.format(envar=cls._guard_var_name, gval=cls._guard_allows_change)
 
     def __enter__(self):
         if not self.tz_change_allowed():
@@ -116,19 +119,20 @@ class TZEnvContext(TZContextBase):
     will apply *unless* a guard is set.
 
     If you do not want the TZ environment variable set, you may set the
-    ``DATEUTIL_MAY_NOT_CHANGE_TZ_VAR`` variable to a truthy value.
+    ``bs_dateutil_MAY_NOT_CHANGE_TZ_VAR`` variable to a truthy value.
     """
-    _guard_var_name = "DATEUTIL_MAY_NOT_CHANGE_TZ_VAR"
+
+    _guard_var_name = "bs_dateutil_MAY_NOT_CHANGE_TZ_VAR"
     _guard_allows_change = False
 
     def get_current_tz(self):
-        return os.environ.get('TZ', UnsetTz)
+        return os.environ.get("TZ", UnsetTz)
 
     def set_current_tz(self, tzval):
-        if tzval is UnsetTz and 'TZ' in os.environ:
-            del os.environ['TZ']
+        if tzval is UnsetTz and "TZ" in os.environ:
+            del os.environ["TZ"]
         else:
-            os.environ['TZ'] = tzval
+            os.environ["TZ"] = tzval
 
         time.tzset()
 
@@ -138,17 +142,18 @@ class TZWinContext(TZContextBase):
     Context manager for changing local time zone on Windows.
 
     Because the effect of this is system-wide and global, it may have
-    unintended side effect. Set the ``DATEUTIL_MAY_CHANGE_TZ`` environment
+    unintended side effect. Set the ``bs_dateutil_MAY_CHANGE_TZ`` environment
     variable to a truthy value before using this context manager.
     """
+
     def get_current_tz(self):
-        p = subprocess.Popen(['tzutil', '/g'], stdout=subprocess.PIPE)
+        p = subprocess.Popen(["tzutil", "/g"], stdout=subprocess.PIPE)
 
         ctzname, err = p.communicate()
-        ctzname = ctzname.decode()     # Popen returns
+        ctzname = ctzname.decode()  # Popen returns
 
         if p.returncode:
-            raise OSError('Failed to get current time zone: ' + err)
+            raise OSError("Failed to get current time zone: " + err)
 
         return ctzname
 
@@ -158,8 +163,9 @@ class TZWinContext(TZContextBase):
         out, err = p.communicate()
 
         if p.returncode:
-            raise OSError('Failed to set current time zone: ' +
-                          (err or 'Unknown error.'))
+            raise OSError(
+                "Failed to set current time zone: " + (err or "Unknown error.")
+            )
 
 
 ###
@@ -168,8 +174,9 @@ class NotAValueClass(object):
     """
     A class analogous to NaN that has operations defined for any type.
     """
+
     def _op(self, other):
-        return self             # Operation with NotAValue returns NotAValue
+        return self  # Operation with NotAValue returns NotAValue
 
     def _cmp(self, other):
         return False
@@ -226,7 +233,8 @@ ComparesEqual = ComparesEqualClass()
 
 
 class UnsetTzClass(object):
-    """ Sentinel class for unset time zone variable """
+    """Sentinel class for unset time zone variable"""
+
     pass
 
 

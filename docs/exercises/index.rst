@@ -1,9 +1,9 @@
 Exercises
 =========
 
-It is often useful to work through some examples in order to understand how a module works; on this page, there are several exercises of varying difficulty that you can use to learn how to use ``dateutil``.
+It is often useful to work through some examples in order to understand how a module works; on this page, there are several exercises of varying difficulty that you can use to learn how to use ``bs_dateutil``.
 
-If you are interested in helping improve the documentation of ``dateutil``, it is recommended that you attempt to complete these exercises with no resources *other than dateutil's documentation*. If you find that the documentation is not clear enough to allow you to complete these exercises, open an issue on the `dateutil issue tracker <https://github.com/dateutil/dateutil/issues>`_ to let the developers know what part of the documentation needs improvement.
+If you are interested in helping improve the documentation of ``bs_dateutil``, it is recommended that you attempt to complete these exercises with no resources *other than bs_dateutil's documentation*. If you find that the documentation is not clear enough to allow you to complete these exercises, open an issue on the `bs_dateutil issue tracker <https://github.com/bs_dateutil/bs_dateutil/issues>`_ to let the developers know what part of the documentation needs improvement.
 
 
 .. contents:: Table of Contents
@@ -33,7 +33,7 @@ To solve this exercise, copy-paste this script into a document, change anything 
 .. code-block:: python3
 
     # ------- YOUR CODE -------------#
-    from dateutil import rrule
+    from bs_dateutil import rrule
 
     MLK_DAY = <<YOUR CODE HERE>>
 
@@ -88,7 +88,7 @@ To solve this exercise, copy-paste this script into a document, change anything 
 .. code-block:: python3
 
     # --------- YOUR CODE -------------- #
-    from dateutil import relativedelta
+    from bs_dateutil import relativedelta
 
     def next_monday(dt):
         <<YOUR CODE HERE>>
@@ -96,7 +96,7 @@ To solve this exercise, copy-paste this script into a document, change anything 
     # ---------------------------------- #
 
     from datetime import datetime
-    from dateutil import tz
+    from bs_dateutil import tz
 
     NEXT_MONDAY_CASES = [
         (datetime(2018, 4, 11, 14, 30, 15, 123456),
@@ -125,7 +125,7 @@ To solve this exercise, copy-paste this script into a document, change anything 
 Parsing a local tzname
 ----------------------
 
-    Three-character time zone abbreviations are *not* unique in that they do not explicitly map to a time zone. A list of time zone abbreviations in use can be found `here <https://www.timeanddate.com/time/zones/>`_. This means that parsing a datetime string such as ``'2018-01-01 12:30:30 CST'`` is ambiguous without context. Using :mod:`dateutil.parser` and :mod:`dateutil.tz`, it is possible to provide a context such that these local names are converted to proper time zones.
+    Three-character time zone abbreviations are *not* unique in that they do not explicitly map to a time zone. A list of time zone abbreviations in use can be found `here <https://www.timeanddate.com/time/zones/>`_. This means that parsing a datetime string such as ``'2018-01-01 12:30:30 CST'`` is ambiguous without context. Using :mod:`bs_dateutil.parser` and :mod:`bs_dateutil.tz`, it is possible to provide a context such that these local names are converted to proper time zones.
 
 Problem 1
 *********
@@ -145,15 +145,15 @@ To solve this exercise, copy-paste this script into a document, change anything 
 .. code-block:: python3
 
     # --------- YOUR CODE -------------- #
-    from dateutil.parser import parse
-    from dateutil import tz
+    from bs_dateutil.parser import parse
+    from bs_dateutil import tz
 
     def parse_func_us_jp_ind():
         <<YOUR CODE HERE>>
 
     # ---------------------------------- #
 
-    from dateutil import tz
+    from bs_dateutil import tz
     from datetime import datetime
 
 
@@ -208,8 +208,8 @@ To solve this exercise, copy-paste this script into a document, change anything 
 .. code-block:: python3
 
     # --------- YOUR CODE -------------- #
-    from dateutil.parser import parse
-    from dateutil import tz
+    from bs_dateutil.parser import parse
+    from bs_dateutil import tz
 
     def parse_func_ind_ire():
         <<YOUR CODE HERE>>

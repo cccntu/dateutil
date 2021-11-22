@@ -1,4 +1,4 @@
-dateutil - powerful extensions to datetime
+bs_dateutil - powerful extensions to datetime
 ==========================================
 
 |pypi| |support| |licence|
@@ -7,64 +7,64 @@ dateutil - powerful extensions to datetime
 
 |travis| |appveyor| |pipelines| |coverage|
 
-.. |pypi| image:: https://img.shields.io/pypi/v/python-dateutil.svg?style=flat-square
-    :target: https://pypi.org/project/python-dateutil/
+.. |pypi| image:: https://img.shields.io/pypi/v/python-bs_dateutil.svg?style=flat-square
+    :target: https://pypi.org/project/python-bs_dateutil/
     :alt: pypi version
 
-.. |support| image:: https://img.shields.io/pypi/pyversions/python-dateutil.svg?style=flat-square
-    :target: https://pypi.org/project/python-dateutil/
+.. |support| image:: https://img.shields.io/pypi/pyversions/python-bs_dateutil.svg?style=flat-square
+    :target: https://pypi.org/project/python-bs_dateutil/
     :alt: supported Python version
 
-.. |travis| image:: https://img.shields.io/travis/dateutil/dateutil/master.svg?style=flat-square&label=Travis%20Build
-    :target: https://travis-ci.org/dateutil/dateutil
+.. |travis| image:: https://img.shields.io/travis/bs_dateutil/bs_dateutil/master.svg?style=flat-square&label=Travis%20Build
+    :target: https://travis-ci.org/bs_dateutil/bs_dateutil
     :alt: travis build status
 
-.. |appveyor| image:: https://img.shields.io/appveyor/ci/dateutil/dateutil/master.svg?style=flat-square&logo=appveyor
-    :target: https://ci.appveyor.com/project/dateutil/dateutil
+.. |appveyor| image:: https://img.shields.io/appveyor/ci/bs_dateutil/bs_dateutil/master.svg?style=flat-square&logo=appveyor
+    :target: https://ci.appveyor.com/project/bs_dateutil/bs_dateutil
     :alt: appveyor build status
 
-.. |pipelines| image:: https://dev.azure.com/pythondateutilazure/dateutil/_apis/build/status/dateutil.dateutil?branchName=master
-    :target: https://dev.azure.com/pythondateutilazure/dateutil/_build/latest?definitionId=1&branchName=master
+.. |pipelines| image:: https://dev.azure.com/pythonbs_dateutilazure/bs_dateutil/_apis/build/status/bs_dateutil.bs_dateutil?branchName=master
+    :target: https://dev.azure.com/pythonbs_dateutilazure/bs_dateutil/_build/latest?definitionId=1&branchName=master
     :alt: azure pipelines build status
 
-.. |coverage| image:: https://codecov.io/gh/dateutil/dateutil/branch/master/graphs/badge.svg?branch=master
-    :target: https://codecov.io/gh/dateutil/dateutil?branch=master
+.. |coverage| image:: https://codecov.io/gh/bs_dateutil/bs_dateutil/branch/master/graphs/badge.svg?branch=master
+    :target: https://codecov.io/gh/bs_dateutil/bs_dateutil?branch=master
     :alt: Code coverage
 
-.. |gitter| image:: https://badges.gitter.im/dateutil/dateutil.svg
-   :alt: Join the chat at https://gitter.im/dateutil/dateutil
-   :target: https://gitter.im/dateutil/dateutil
+.. |gitter| image:: https://badges.gitter.im/bs_dateutil/bs_dateutil.svg
+   :alt: Join the chat at https://gitter.im/bs_dateutil/bs_dateutil
+   :target: https://gitter.im/bs_dateutil/bs_dateutil
 
-.. |licence| image:: https://img.shields.io/pypi/l/python-dateutil.svg?style=flat-square
-    :target: https://pypi.org/project/python-dateutil/
+.. |licence| image:: https://img.shields.io/pypi/l/python-bs_dateutil.svg?style=flat-square
+    :target: https://pypi.org/project/python-bs_dateutil/
     :alt: licence
 
-.. |readthedocs| image:: https://img.shields.io/readthedocs/dateutil/latest.svg?style=flat-square&label=Read%20the%20Docs
-   :alt: Read the documentation at https://dateutil.readthedocs.io/en/latest/
-   :target: https://dateutil.readthedocs.io/en/latest/
+.. |readthedocs| image:: https://img.shields.io/readthedocs/bs_dateutil/latest.svg?style=flat-square&label=Read%20the%20Docs
+   :alt: Read the documentation at https://bs_dateutil.readthedocs.io/en/latest/
+   :target: https://bs_dateutil.readthedocs.io/en/latest/
 
-The `dateutil` module provides powerful extensions to
+The `bs_dateutil` module provides powerful extensions to
 the standard `datetime` module, available in Python.
 
 Installation
 ============
-`dateutil` can be installed from PyPI using `pip` (note that the package name is
+`bs_dateutil` can be installed from PyPI using `pip` (note that the package name is
 different from the importable name)::
 
-    pip install python-dateutil
+    pip install python-bs_dateutil
 
 Download
 ========
-dateutil is available on PyPI
-https://pypi.org/project/python-dateutil/
+bs_dateutil is available on PyPI
+https://pypi.org/project/python-bs_dateutil/
 
 The documentation is hosted at:
-https://dateutil.readthedocs.io/en/stable/
+https://bs_dateutil.readthedocs.io/en/stable/
 
 Code
 ====
 The code and issue tracker are hosted on GitHub:
-https://github.com/dateutil/dateutil/
+https://github.com/bs_dateutil/bs_dateutil/
 
 Features
 ========
@@ -101,10 +101,10 @@ date out of the "date" unix system command. Here is the code:
 
 .. doctest:: readmeexample
 
-    >>> from dateutil.relativedelta import *
-    >>> from dateutil.easter import *
-    >>> from dateutil.rrule import *
-    >>> from dateutil.parser import *
+    >>> from bs_dateutil.relativedelta import *
+    >>> from bs_dateutil.easter import *
+    >>> from bs_dateutil.rrule import *
+    >>> from bs_dateutil.parser import *
     >>> from datetime import *
     >>> now = parse("Sat Oct 11 17:13:46 UTC 2003")
     >>> today = now.date()
@@ -129,7 +129,7 @@ We welcome many types of contributions - bug reports, pull requests (code, infra
 
 Author
 ======
-The dateutil module was written by Gustavo Niemeyer <gustavo@niemeyer.net>
+The bs_dateutil module was written by Gustavo Niemeyer <gustavo@niemeyer.net>
 in 2003.
 
 It is maintained by:
@@ -155,7 +155,7 @@ uploaded to PyPI will no longer have GPG signatures attached.
 
 Contact
 =======
-Our mailing list is available at `dateutil@python.org <https://mail.python.org/mailman/listinfo/dateutil>`_. As it is hosted by the PSF, it is subject to the `PSF code of
+Our mailing list is available at `bs_dateutil@python.org <https://mail.python.org/mailman/listinfo/bs_dateutil>`_. As it is hosted by the PSF, it is subject to the `PSF code of
 conduct <https://www.python.org/psf/conduct/>`_.
 
 License

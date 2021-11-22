@@ -1,4 +1,4 @@
-This is a (possibly incomplete) list of all the contributors to python-dateutil,
+This is a (possibly incomplete) list of all the contributors to python-bs_dateutil,
 initially generated from the git author metadata. The details of their specific
 contributions can be found in the git history.
 
@@ -127,4 +127,4 @@ switch, and thus all their contributions are dual-licensed.
 - ms-boom <ms-boom@MASKED>
 - ryanss <ryanssdev@MASKED> (gh: @ryanss) **R**
 
-Unless someone has deliberately given permission to publish their e-mail, I have masked the domain names. If you are not on this list and believe you should be, or you *are* on this list and your information is inaccurate, please e-mail the current maintainer or the mailing list (dateutil@python.org) with your name, e-mail (if desired) and GitHub (if desired / applicable), as you would like them displayed. Additionally, please indicate if you are willing to dual license your old contributions under Apache 2.0.
+Unless someone has deliberately given permission to publish their e-mail, I have masked the domain names. If you are not on this list and believe you should be, or you *are* on this list and your information is inaccurate, please e-mail the current maintainer or the mailing list (bs_dateutil@python.org) with your name, e-mail (if desired) and GitHub (if desired / applicable), as you would like them displayed. Additionally, please indicate if you are willing to dual license your old contributions under Apache 2.0.
