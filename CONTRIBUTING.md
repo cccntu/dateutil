@@ -1,6 +1,6 @@
 # Contributing
 
-This document outlines the ways to contribute to `python-bs_dateutil`. This is a fairly small, low-traffic project, so most of the contribution norms (coding style, acceptance criteria) have been developed ad hoc and this document will not be exhaustive. If you are interested in contributing code or documentation, please take a moment to at least review the license section to understand how your code will be licensed.
+This document outlines the ways to contribute to `bs_dateutil`. This is a fairly small, low-traffic project, so most of the contribution norms (coding style, acceptance criteria) have been developed ad hoc and this document will not be exhaustive. If you are interested in contributing code or documentation, please take a moment to at least review the license section to understand how your code will be licensed.
 
 ## Types of contribution
 

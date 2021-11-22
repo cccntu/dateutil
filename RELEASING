@@ -54,8 +54,8 @@ To make a release:
    number will be `3.1.2.dev0`, and subsequent commits will be things like
    `3.1.2.dev0+fe9dacc4.d20220603`).
 
-2. Check the Test PyPI page for `python-bs_dateutil` to ensure that the dev release
-   worked correctly: https://test.pypi.org/project/python-bs_dateutil/
+2. Check the Test PyPI page for `bs_dateutil` to ensure that the dev release
+   worked correctly: https://test.pypi.org/project/bs_dateutil/
 
    Dev releases may not appear as the default page, so click "Release history"
    and navigate to the release you are trying to check. Make sure that the
@@ -72,7 +72,7 @@ To make a release:
 
 6. Create a new GitHub release with the new entries from `NEWS` in the
    description. This will trigger the workflow to build and release the final
-   version to PyPI.org. Check https://pypi.org/project/python-bs_dateutil to
+   version to PyPI.org. Check https://pypi.org/project/bs_dateutil to
    ensure that everything worked correctly.
 
 7. Delete any dev tags created during the testing process from your upstream

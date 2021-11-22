@@ -7,12 +7,12 @@ bs_dateutil - powerful extensions to datetime
 
 |travis| |appveyor| |pipelines| |coverage|
 
-.. |pypi| image:: https://img.shields.io/pypi/v/python-bs_dateutil.svg?style=flat-square
-    :target: https://pypi.org/project/python-bs_dateutil/
+.. |pypi| image:: https://img.shields.io/pypi/v/bs_dateutil.svg?style=flat-square
+    :target: https://pypi.org/project/bs_dateutil/
     :alt: pypi version
 
-.. |support| image:: https://img.shields.io/pypi/pyversions/python-bs_dateutil.svg?style=flat-square
-    :target: https://pypi.org/project/python-bs_dateutil/
+.. |support| image:: https://img.shields.io/pypi/pyversions/bs_dateutil.svg?style=flat-square
+    :target: https://pypi.org/project/bs_dateutil/
     :alt: supported Python version
 
 .. |travis| image:: https://img.shields.io/travis/bs_dateutil/bs_dateutil/master.svg?style=flat-square&label=Travis%20Build
@@ -35,8 +35,8 @@ bs_dateutil - powerful extensions to datetime
    :alt: Join the chat at https://gitter.im/bs_dateutil/bs_dateutil
    :target: https://gitter.im/bs_dateutil/bs_dateutil
 
-.. |licence| image:: https://img.shields.io/pypi/l/python-bs_dateutil.svg?style=flat-square
-    :target: https://pypi.org/project/python-bs_dateutil/
+.. |licence| image:: https://img.shields.io/pypi/l/bs_dateutil.svg?style=flat-square
+    :target: https://pypi.org/project/bs_dateutil/
     :alt: licence
 
 .. |readthedocs| image:: https://img.shields.io/readthedocs/bs_dateutil/latest.svg?style=flat-square&label=Read%20the%20Docs
@@ -51,12 +51,12 @@ Installation
 `bs_dateutil` can be installed from PyPI using `pip` (note that the package name is
 different from the importable name)::
 
-    pip install python-bs_dateutil
+    pip install bs_dateutil
 
 Download
 ========
 bs_dateutil is available on PyPI
-https://pypi.org/project/python-bs_dateutil/
+https://pypi.org/project/bs_dateutil/
 
 The documentation is hosted at:
 https://bs_dateutil.readthedocs.io/en/stable/

@@ -1,4 +1,4 @@
-This is a (possibly incomplete) list of all the contributors to python-bs_dateutil,
+This is a (possibly incomplete) list of all the contributors to bs_dateutil,
 initially generated from the git author metadata. The details of their specific
 contributions can be found in the git history.
 
